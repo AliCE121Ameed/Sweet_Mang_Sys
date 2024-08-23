@@ -17,5 +17,7 @@ import io.cucumber. junit. CucumberOptions.SnippetType;
 )
 
 
-public class Acceptance {
+public class
+
+Acceptance {
 }

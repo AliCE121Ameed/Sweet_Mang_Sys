@@ -33,6 +33,12 @@
     </build>
 
     <properties>
+
+        <java.version>20</java.version>
+
+        <junit.version>5.9.2</junit.version>
+        <cucumber.version>7.18.1</cucumber.version>
+
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <sonar.organization>alice121ameed</sonar.organization>

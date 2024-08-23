@@ -9,13 +9,12 @@
     <version>1.0-SNAPSHOT</version>
 
 
+
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version>
                 <executions>
                     <execution>
                         <goals>
@@ -30,45 +29,35 @@
                         </goals>
                     </execution>
                 </executions>
-
             </plugin>
+            <!-- other plugins -->
         </plugins>
     </build>
 
+
+
     <properties>
-
-<!--       <java.version>17</java.version>-->
-<!--       <junit.version>5.9.2</junit.version>-->
-<!--       <cucumber.version>7.18.1</cucumber.version>-->
-
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <!--        <java.version>20</java.version>-->
+        <!--        <junit.version>5.9.2</junit.version>-->
+        <!--        <cucumber.version>7.18.1</cucumber.version>-->
 
         <sonar.organization>alice121ameed</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
 
     <dependencies>
 
+
         <dependency>
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.12</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.19.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.19.0</version>
         </dependency>
 
         <dependency>
@@ -136,6 +125,8 @@
             <version>5.0.0</version>
             <scope>test</scope>
         </dependency>
+
+
 
     </dependencies>
 

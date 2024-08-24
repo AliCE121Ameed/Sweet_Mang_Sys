@@ -28,8 +28,6 @@ public class Products_GUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         productNameField = new javax.swing.JTextField();
         productPriceField = new javax.swing.JTextField();
-        productNameField.addActionListener(e -> productNameFieldActionPerformed());
-    productPriceField.addActionListener(e -> productPriceFieldActionPerformed());
         backButton = new javax.swing.JButton();
         okButton = new javax.swing.JButton();
         actionComboBox = new javax.swing.JComboBox();  //
@@ -184,12 +182,12 @@ public class Products_GUI extends javax.swing.JFrame {
     }
 
 
-    private void productNameFieldActionPerformed{
-       
+    private void productNameFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
     }
 
-    private void productPriceFieldActionPerformed {
-      
+    private void productPriceFieldActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
     }
 
     private void addProduct(String name, double price, boolean allergic) {
@@ -274,3 +272,4 @@ public class Products_GUI extends javax.swing.JFrame {
     private javax.swing.JTextField productNameField;
     private javax.swing.JTextField productPriceField;
 
+}

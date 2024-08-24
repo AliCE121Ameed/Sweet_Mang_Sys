@@ -6,15 +6,11 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.*;
 
-
 public class Email_Notification {
-
 
     public static final String MANAGER_EMAIL = "s12112361@stu.najah.edu";
     private static final String SENDER_EMAIL = "s12112361@stu.najah.edu";
-       private static final String SENDER_PASSWORD = System.getenv("SENDER_PASSWORD");
-
-  
+    private static final String SENDER_PASSWORD = System.getenv("EMAIL_PASSWORD");
 
     public void sendEmail (String to, String subject, String message){
         String host = "smtp.gmail.com";
@@ -39,12 +35,10 @@ public class Email_Notification {
             m.setText(message);
 
             Transport.send(m);
-            //System.out.println("A message has been sent to you via Email !);
             JOptionPane.showMessageDialog(null,"A message has been sent to you via Email !");
 
         } catch (MessagingException mex) {
             mex.printStackTrace();
         }
     }
-
 }

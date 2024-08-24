@@ -38,19 +38,19 @@ private void initComponents() {
     makeOrderButton.setFont(new java.awt.Font("Segoe UI", 3, 24));
     makeOrderButton.setForeground(new java.awt.Color(255, 255, 255));
     makeOrderButton.setText("Create Order");
-    makeOrderButton.addActionListener(evt -> makeOrderButtonActionPerformed(evt));  
+    makeOrderButton.addActionListener(this::makeOrderButtonActionPerformed);  // Updated with method reference
 
     showOrdersButton.setBackground(new java.awt.Color(0, 0, 0));
     showOrdersButton.setFont(new java.awt.Font("Segoe UI", 3, 24));
     showOrdersButton.setForeground(new java.awt.Color(255, 255, 255));
     showOrdersButton.setText("Show Order");
-    showOrdersButton.addActionListener(evt -> showOrdersButtonActionPerformed(evt)); 
+    showOrdersButton.addActionListener(evt -> showOrdersButtonActionPerformed(evt)); // Lambda expression
 
     backButton.setBackground(new java.awt.Color(255, 102, 102));
     backButton.setFont(new java.awt.Font("Segoe UI", 3, 18));
     backButton.setForeground(new java.awt.Color(0, 0, 0));
     backButton.setText("← Back");
-    backButton.addActionListener(evt -> backButtonActionPerformed(evt)); 
+    backButton.addActionListener(evt -> backButtonActionPerformed(evt)); // Lambda expression
 
     jLabel0.setFont(new java.awt.Font("Segoe UI", 3, 36));
     jLabel0.setText("Order Page");

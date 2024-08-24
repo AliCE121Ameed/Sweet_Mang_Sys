@@ -8,7 +8,7 @@ import Package_Sweet.DataBase;
  * AdminFrame class represents the admin dashboard where the admin can manage accounts,
  * content, monitoring, and reporting, and also log out.
  */
-public class Admin_GUI extends javax.swing.JFrame {
+public class AdminGUI extends javax.swing.JFrame {
 
     private DataBase dataBase;
 

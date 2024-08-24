@@ -1,6 +1,10 @@
+
 package admin.gui;
 
 import admin.database.DataBase;
+
+
+
 /**
  * AdminFrame class represents the admin dashboard where the admin can manage accounts,
  * content, monitoring, and reporting, and also log out.

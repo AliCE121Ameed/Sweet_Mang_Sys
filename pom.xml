@@ -83,9 +83,7 @@
 
 
     <properties>
-        <!--        <java.version>20</java.version>-->
-        <!--        <junit.version>5.9.2</junit.version>-->
-        <!--        <cucumber.version>7.18.1</cucumber.version>-->
+       
 
         <sonar.organization>alice121ameed</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>

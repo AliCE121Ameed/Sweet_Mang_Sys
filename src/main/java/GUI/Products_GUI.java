@@ -11,19 +11,28 @@ public class Products_GUI extends javax.swing.JFrame {
     private Owner owner;
     private DataBase dataBase;
 
+
     public Products_GUI(DataBase dataBase, Owner owner) {
         this.owner = owner;
         this.dataBase = dataBase;
         initComponents();
     }
 
+
+    @SuppressWarnings("unchecked")
+
+
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
+
         jLabel1 = new javax.swing.JLabel();
         productNameField = new javax.swing.JTextField();
         productPriceField = new javax.swing.JTextField();
+        productNameField.addActionListener(e -> productNameFieldActionPerformed());
+    productPriceField.addActionListener(e -> productPriceFieldActionPerformed());
         backButton = new javax.swing.JButton();
         okButton = new javax.swing.JButton();
-        actionComboBox = new javax.swing.JComboBox<>();
+        actionComboBox = new javax.swing.JComboBox();  //
         allergicRadioButton = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -34,30 +43,36 @@ public class Products_GUI extends javax.swing.JFrame {
         jLabel1.setText("Products Owner Page");
 
         productNameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        productPriceField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        productNameField.addActionListener(e -> productNameFieldActionPerformed());
-        productPriceField.addActionListener(e -> productPriceFieldActionPerformed());
+        productPriceField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         backButton.setBackground(new java.awt.Color(255, 102, 102));
         backButton.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         backButton.setForeground(new java.awt.Color(0, 0, 0));
         backButton.setText("← Back");
-        backButton.addActionListener(this::backButtonActionPerformed);
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
 
         okButton.setBackground(new java.awt.Color(0, 0, 0));
         okButton.setFont(new java.awt.Font("Segoe UI", 3, 21)); // NOI18N
         okButton.setForeground(new java.awt.Color(255, 255, 255));
         okButton.setText("Save");
-        okButton.addActionListener(this::okButtonActionPerformed);
+        okButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okButtonActionPerformed(evt);
+            }
+        });
 
-        actionComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Add", "Edit", "Delete"}));
+        actionComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"add", "edit", "delete"}));
 
         allergicRadioButton.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         allergicRadioButton.setText("Allergic");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 3, 21)); // NOI18N
-        jLabel7.setText("Name");
+        jLabel7.setText(" Name");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 3, 21)); // NOI18N
         jLabel8.setText("Price");
@@ -65,74 +80,76 @@ public class Products_GUI extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(backButton))
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(productNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(27, 27, 27)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                        .addComponent(allergicRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(actionComboBox, 0, 98, Short.MAX_VALUE))
+                                                                .addGap(46, 46, 46))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(productPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(171, 171, 171))))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(backButton)
+                                                .addGap(334, 350, Short.MAX_VALUE))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(117, 117, 117)
-                            .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(23, 23, 23)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel7)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(productNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel8)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(productPriceField)))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(actionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(allergicRadioButton))))
-                    .addContainerGap(48, Short.MAX_VALUE))
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addGap(42, 42, 42))
+                                .addGap(117, 117, 117)
+                                .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(87, 87, 87)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel7)
-                        .addComponent(productNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(actionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel8)
-                        .addComponent(productPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(allergicRadioButton))
-                    .addGap(40, 40, 40)
-                    .addComponent(okButton)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                    .addComponent(backButton)
-                    .addContainerGap())
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(productNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(actionComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(59, 59, 59))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(37, 37, 37)
+                                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(productPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(allergicRadioButton)))
+                                .addGap(40, 40, 40)
+                                .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(44, 44, 44)
+                                .addComponent(backButton)
+                                .addContainerGap())
         );
 
         pack();
-    }
+    }// </editor-fold>
 
-  
 
-private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // Navigate back to the previous frame, perhaps OwnerFrame
         Owner_GUI ownerFrame = new Owner_GUI(dataBase, owner);
         ownerFrame.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }
 
-
-
-
-    
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {
         String action = actionComboBox.getSelectedItem().toString();
         String productName = productNameField.getText();
@@ -257,4 +274,3 @@ private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JTextField productNameField;
     private javax.swing.JTextField productPriceField;
 
-}

@@ -1,5 +1,4 @@
-package gui;
-
+package admin.gui; 
 
 
 import Package_Sweet.DataBase;

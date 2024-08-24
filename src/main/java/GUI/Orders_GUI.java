@@ -26,20 +26,27 @@ public class Orders_GUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
-    private void initComponents() {
+private void initComponents() {
 
-        makeOrderButton = new javax.swing.JButton();
-        showOrdersButton = new javax.swing.JButton();
-        backButton = new javax.swing.JButton();
-        jLabel0 = new javax.swing.JLabel();
+    makeOrderButton = new javax.swing.JButton();
+    showOrdersButton = new javax.swing.JButton();
+    backButton = new javax.swing.JButton();
+    jLabel0 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        makeOrderButton.setBackground(new java.awt.Color(0, 0, 0));
-        makeOrderButton.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        makeOrderButton.setForeground(new java.awt.Color(255, 255, 255));
-        makeOrderButton.setText("Create Order");
-        makeOrderButton.addActionListener(new java.awt.event.ActionListener() {
+    makeOrderButton.setBackground(new java.awt.Color(0, 0, 0));
+    makeOrderButton.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+    makeOrderButton.setForeground(new java.awt.Color(255, 255, 255));
+    makeOrderButton.setText("Create Order");
+    makeOrderButton.addActionListener(e -> {
+        
+    });
+
+    
+}
+
+            
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 makeOrderButtonActionPerformed(evt);
             }

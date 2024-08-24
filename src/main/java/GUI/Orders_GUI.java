@@ -11,10 +11,13 @@ import java.util.List;
  * OrdersFrame class for managing and displaying orders.
  */
 public class Orders_GUI extends javax.swing.JFrame {
+    private static final String UI_FONT = "Segoe UI"; // Font used throughout the GUI
+    private static final int TITLE_FONT_SIZE = 36;
+    private static final int BUTTON_FONT_SIZE = 24;
+    private static final int BACK_BUTTON_FONT_SIZE = 18;
 
     private DataBase dataBase;
     private Owner owner;
-
 
     public Orders_GUI(DataBase dataBase, Owner owner) {
         this.dataBase = dataBase;
@@ -22,72 +25,71 @@ public class Orders_GUI extends javax.swing.JFrame {
         initComponents();
     }
 
+    private void initComponents() {
+        makeOrderButton = new javax.swing.JButton();
+        showOrdersButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
+        jLabel0 = new javax.swing.JLabel();
 
-    @SuppressWarnings("unchecked")
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
-private void initComponents() {
-    makeOrderButton = new javax.swing.JButton();
-    showOrdersButton = new javax.swing.JButton();
-    backButton = new javax.swing.JButton();
-    jLabel0 = new javax.swing.JLabel();
+        makeOrderButton.setBackground(new java.awt.Color(0, 0, 0));
+        makeOrderButton.setFont(new java.awt.Font(UI_FONT, java.awt.Font.BOLD, BUTTON_FONT_SIZE));
+        makeOrderButton.setForeground(new java.awt.Color(255, 255, 255));
+        makeOrderButton.setText("Create Order");
+        makeOrderButton.addActionListener(this::makeOrderButtonActionPerformed);
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        showOrdersButton.setBackground(new java.awt.Color(0, 0, 0));
+        showOrdersButton.setFont(new java.awt.Font(UI_FONT, java.awt.Font.BOLD, BUTTON_FONT_SIZE));
+        showOrdersButton.setForeground(new java.awt.Color(255, 255, 255));
+        showOrdersButton.setText("Show Order");
+        showOrdersButton.addActionListener(this::showOrdersButtonActionPerformed);
 
-    makeOrderButton.setBackground(new java.awt.Color(0, 0, 0));
-    makeOrderButton.setFont(new java.awt.Font("Segoe UI", 3, 24));
-    makeOrderButton.setForeground(new java.awt.Color(255, 255, 255));
-    makeOrderButton.setText("Create Order");
-    makeOrderButton.addActionListener(this::makeOrderButtonActionPerformed);  // Updated with method reference
+        backButton.setBackground(new java.awt.Color(255, 102, 102));
+        backButton.setFont(new java.awt.Font(UI_FONT, java.awt.Font.BOLD, BACK_BUTTON_FONT_SIZE));
+        backButton.setForeground(new java.awt.Color(0, 0, 0));
+        backButton.setText("← Back");
+        backButton.addActionListener(this::backButtonActionPerformed);
 
-    showOrdersButton.setBackground(new java.awt.Color(0, 0, 0));
-    showOrdersButton.setFont(new java.awt.Font("Segoe UI", 3, 24));
-    showOrdersButton.setForeground(new java.awt.Color(255, 255, 255));
-    showOrdersButton.setText("Show Order");
-    showOrdersButton.addActionListener(evt -> showOrdersButtonActionPerformed(evt)); // Lambda expression
+        jLabel0.setFont(new java.awt.Font(UI_FONT, java.awt.Font.BOLD, TITLE_FONT_SIZE));
+        jLabel0.setText("Order Page");
 
-    backButton.setBackground(new java.awt.Color(255, 102, 102));
-    backButton.setFont(new java.awt.Font("Segoe UI", 3, 18));
-    backButton.setForeground(new java.awt.Color(0, 0, 0));
-    backButton.setText("← Back");
-    backButton.addActionListener(evt -> backButtonActionPerformed(evt)); // Lambda expression
-
-    jLabel0.setFont(new java.awt.Font("Segoe UI", 3, 36));
-    jLabel0.setText("Order Page");
-
-    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-    getContentPane().setLayout(layout);
-    layout.setHorizontalGroup(
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(backButton)
-                            .addContainerGap(383, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel0, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(showOrdersButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(makeOrderButton, javax.swing.GroupLayout.Alignment.LEADING)))
-                            .addGap(117, 117, 117))
-    );
-    layout.setVerticalGroup(
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(backButton)
+                    .addContainerGap(383, Short.MAX_VALUE))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel0, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(showOrdersButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(makeOrderButton, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addGap(117, 117, 117))
+        );
+        layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                            .addGap(32, 32, 32)
-                            .addComponent(jLabel0)
-                            .addGap(63, 63, 63)
-                            .addComponent(makeOrderButton)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(showOrdersButton)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                            .addComponent(backButton)
-                            .addContainerGap())
-    );
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(32, 32, 32)
+                    .addComponent(jLabel0)
+                    .addGap(63, 63, 63)
+                    .addComponent(makeOrderButton)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(showOrdersButton)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                    .addComponent(backButton)
+                    .addContainerGap())
+        );
 
-    pack();
-}
+        pack();
+    }
+
+
+
 
 
 

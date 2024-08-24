@@ -1,8 +1,6 @@
-package GUI; 
-
+package GUI;
 
 import Package_Sweet.DataBase;
-
 
 /**
  * AdminFrame class represents the admin dashboard where the admin can manage accounts,
@@ -197,3 +195,5 @@ public class Admin_GUI extends javax.swing.JFrame {
     private javax.swing.JButton logOutButton;
     private javax.swing.JButton manageAccountsButton;
     private javax.swing.JButton monitoringAndReportingButton;
+
+}

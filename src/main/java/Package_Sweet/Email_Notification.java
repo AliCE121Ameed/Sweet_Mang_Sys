@@ -12,7 +12,7 @@ public class Email_Notification {
 
     public static final String MANAGER_EMAIL = "s12112361@stu.najah.edu";
     private static final String SENDER_EMAIL = "s12112361@stu.najah.edu";
-    private static final String SENDER_PASSWORD = "wozfzvjzfqecpsqy";
+       private static final String SENDER_PASSWORD = System.getenv("SENDER_PASSWORD");
 
   
 

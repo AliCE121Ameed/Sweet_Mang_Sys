@@ -237,7 +237,6 @@ public class Login_GUI extends javax.swing.JFrame {
     public javax.swing.JTextField usernameField;
 
 
-//    private javax.swing.JPanel jPanel1;
 //    public javax.swing.JTextField usernameField;
 //    public javax.swing.JPasswordField passwordField;
 //    public javax.swing.JButton loginButton;

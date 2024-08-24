@@ -183,11 +183,11 @@ public class Products_GUI extends javax.swing.JFrame {
 
 
     private void productNameFieldActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+       
     }
 
     private void productPriceFieldActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+      
     }
 
     private void addProduct(String name, double price, boolean allergic) {

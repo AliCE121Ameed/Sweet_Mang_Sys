@@ -1,8 +1,8 @@
 # Sweet Management System (Sweet_Mang_Sys)
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)  
 ![Language](https://img.shields.io/badge/language-Java-yellow)  
-![BDD](https://img.shields.io/badge/Testing-BDD-Cucumber-green)  
+![BDD](https://img.shields.io/badge/Testing-BDD-Cucumber)  
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)  
 ![Quality](https://img.shields.io/badge/code_quality-SonarCloud-blue)
 
 ---
